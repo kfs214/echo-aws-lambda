@@ -4,14 +4,15 @@ const josephJoestar = (input_text) => {
   const pattern = /「.+」/;
   const quoted_text = input_text.match(pattern);
   if (quoted_text) {
-    return `your message is \"${input_text}\"`;
+    return `${quoted_text[0]}……はっ！`;
   } else {
-    return `「quoted_text」……はっ！`;
+    return `your message is '${input_text}'`;
   }
 };
 
 module.exports.echo = async (event) => {
-  const message = event.body.message;
+  const body = JSON.parse(event.body);
+  const message = body.message;
   const replying_message = josephJoestar(message);
 
   return {
