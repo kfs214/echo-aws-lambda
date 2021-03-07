@@ -175,7 +175,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/echo-aws-lambda/dev/1615083015208-2021-03-07T02:10:15.208Z/echo-aws-lambda.zip"
+                "S3Key": "serverless/echo-aws-lambda/dev/1615102023205-2021-03-07T07:27:03.205Z/echo-aws-lambda.zip"
               },
               "Handler": "handler.echo",
               "Runtime": "nodejs12.x",
@@ -193,14 +193,14 @@
               "EchoLogGroup"
             ]
           },
-          "EchoLambdaVersion4nkrnnRH6niIdGewdUi5TvtUW2l5dc6yDEzyoto": {
+          "EchoLambdaVersionNSmJUfL6uJiIf5OxLIfQCLUOGL68mwMdHpAazvQiSk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "EchoLambdaFunction"
               },
-              "CodeSha256": "4VCaNuJx4fXqFd9qSDink0KvQMh4xtajyEOb7lZtlfs="
+              "CodeSha256": "DgP0yeHc0zUKrnXkmvKPKrYLmxhmwJlRfXvMBPwyrzU="
             }
           },
           "HttpApi": {
@@ -305,7 +305,7 @@
           "EchoLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "EchoLambdaVersion4nkrnnRH6niIdGewdUi5TvtUW2l5dc6yDEzyoto"
+              "Ref": "EchoLambdaVersionNSmJUfL6uJiIf5OxLIfQCLUOGL68mwMdHpAazvQiSk"
             }
           },
           "HttpApiId": {
@@ -430,7 +430,8 @@
           {
             "httpApi": {
               "path": "/echo",
-              "method": "post"
+              "method": "post",
+              "cors": true
             },
             "resolvedMethod": "POST",
             "resolvedPath": "/echo"
@@ -442,7 +443,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "EchoLambdaVersion4nkrnnRH6niIdGewdUi5TvtUW2l5dc6yDEzyoto"
+        "versionLogicalId": "EchoLambdaVersionNSmJUfL6uJiIf5OxLIfQCLUOGL68mwMdHpAazvQiSk"
       }
     },
     "configValidationMode": "warn",
@@ -464,7 +465,7 @@
     "artifact": "/Users/private/learning/echo-aws-lambda/.serverless/echo-aws-lambda.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/echo-aws-lambda/dev/1615083015208-2021-03-07T02:10:15.208Z",
+    "artifactDirectoryName": "serverless/echo-aws-lambda/dev/1615102023205-2021-03-07T07:27:03.205Z",
     "artifact": "echo-aws-lambda.zip"
   }
 }

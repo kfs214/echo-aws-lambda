@@ -1,8 +1,14 @@
 "use strict";
 
 module.exports.echo = async (event) => {
+  console.log(event);
   return {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
+    },
     body: JSON.stringify(
       {
         message: "Go Serverless v1.0! Your function executed successfully!",
